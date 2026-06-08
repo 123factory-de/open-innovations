@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 15
     env:
       HUGO_VERSION: 0.153.3
-      HUGO_BASEURL: https://blog.123factory.de/open-innovations/
+      HUGO_BASEURL: https://openinnovation.123factory.de/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
