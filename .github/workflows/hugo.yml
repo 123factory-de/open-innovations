@@ -28,6 +28,7 @@ jobs:
     timeout-minutes: 15
     env:
       HUGO_VERSION: 0.153.3
+      HUGO_BASEURL: https://blog.123factory.de/open-innovations/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,7 +58,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${HUGO_BASEURL}"
           test -f public/index.html
 
       - name: Upload artifact
