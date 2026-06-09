@@ -406,7 +406,9 @@
         {{ end }}
         <p class="oi-empty" data-oi-empty>{{ T "no_programs_for_tag" }}</p>
       </section>
-      {{ partial "pagination.html" . }}
+      <div data-oi-pagination>
+        {{ partial "pagination.html" . }}
+      </div>
     {{ end }}
   </section>
 
@@ -419,6 +421,7 @@
       const cards = Array.from(grid.querySelectorAll(".oi-card"));
       const emptyState = grid.querySelector("[data-oi-empty]");
       const tagButtons = Array.from(document.querySelectorAll(".programs-list [data-filter-tag]"));
+      const pagination = document.querySelector(".programs-list [data-oi-pagination]");
       const params = new URLSearchParams(window.location.search);
 
       const updateUrl = (tag) => {
@@ -446,6 +449,10 @@
 
         if (emptyState) {
           emptyState.style.display = visibleCount === 0 ? "block" : "none";
+        }
+
+        if (pagination) {
+          pagination.style.display = tag === "all" ? "" : "none";
         }
       };
 

@@ -29,10 +29,17 @@ Create one Hugo leaf bundle per included program:
 
 ```text
 content/programs/<program-slug>/index.md
+content/programs/<program-slug>/index.ko.md
 content/programs/<program-slug>/feature.<ext>
 ```
 
 Do not create content for rows under `## Excluded Or Uncertain Leads` unless the user explicitly asks.
+
+Default language rule:
+
+- Unless the user explicitly asks for English-only output, create both `index.md` and `index.ko.md` for every new program bundle.
+- Treat Korean content as required, not optional.
+- If an English file already exists but the Korean file is missing, create only the missing `index.ko.md` unless the user asks to refresh English too.
 
 ## Conversion Workflow
 
@@ -44,8 +51,9 @@ Do not create content for rows under `## Excluded Or Uncertain Leads` unless the
 6. If an existing bundle already represents the same program, skip it.
 7. If the bundle exists, do not overwrite it unless the user asks to refresh or replace existing content.
 8. Create only missing entries with valid Hugo YAML frontmatter and a concise body.
-9. Add a small representative image when a suitable official image can be found.
-10. Run a quick validation pass:
+9. Create the Korean companion file for each new entry.
+10. Add a small representative image when a suitable official image can be found.
+11. Run a quick validation pass:
    - Every file has frontmatter bounded by `---`.
    - `draft` is `false`.
    - `externalUrl` is non-empty.
@@ -53,6 +61,7 @@ Do not create content for rows under `## Excluded Or Uncertain Leads` unless the
    - Otherwise, any representative image is named `feature.<ext>`, `cover.<ext>`, or `thumbnail.<ext>` inside the same bundle.
    - `focusAreas` and `eligibility` are YAML lists.
    - Body includes `## Overview`, `## Focus Areas`, `## Collaboration & Benefits`, `## How to Apply`, and `## Sources`.
+   - Both `index.md` and `index.ko.md` exist for each newly created bundle unless the user explicitly requested otherwise.
 
 ## Slug Rules
 
@@ -111,6 +120,8 @@ summary: "One sentence describing the program, sponsor, and collaboration opport
 ---
 ```
 
+Use the same schema for `index.ko.md`. Translate `summary` into natural Korean while keeping names, brands, URLs, dates, and status values faithful to the source report.
+
 Rules:
 
 - Use the report `Last checked` date as `date`.
@@ -125,6 +136,7 @@ Rules:
 - Add `featureimage` only if a non-standard bundle-local image filename is necessary.
 - Avoid adding frontmatter fields not used by the project unless the user asks.
 - `status` may be omitted when `deadline` alone is enough to describe the program state.
+- Keep `status` values machine-stable across languages. Use the same canonical value in `index.md` and `index.ko.md`, such as `Always Open`, `Active`, `Closed`, or `Unknown`.
 
 ## Representative Image Workflow
 
@@ -241,6 +253,41 @@ Explain the application path, deadline if any, and link to the official program 
 - [Representative image source](https://official.example/image-or-page)
 ```
 
+Create a Korean companion body in `index.ko.md` using the same section structure:
+
+```markdown
+## Overview
+
+짧은 한국어 문단으로 프로그램 목적, 운영 주체, 대상 협업 파트너, 현재 상태를 설명한다.
+
+## Focus Areas
+
+- 항목 1
+- 항목 2
+
+## Collaboration & Benefits
+
+- 협업 방식 또는 기대 효과
+- 협업 방식 또는 기대 효과
+
+## How to Apply
+
+지원 경로, 마감일, 공식 프로그램 페이지를 한국어로 설명한다.
+
+## Sources
+
+- [Official program page](https://official.example/path)
+- [Representative image source](https://official.example/image-or-page)
+```
+
+Korean writing rules:
+
+- Write natural Korean, not word-for-word translation.
+- Keep brand names, program names, URLs, and ISO dates unchanged unless there is a widely used Korean rendering.
+- Translate descriptive text, benefits, and application instructions into concise Korean.
+- It is acceptable to keep the section headings in English if that matches the existing project pattern.
+- Preserve uncertainty in Korean too. If status is `Unknown`, explain why the current application state is unclear.
+
 If the report has multiple official sources, include them all under `## Sources`.
 
 ## Content Rules
@@ -258,6 +305,10 @@ If the report has multiple official sources, include them all under `## Sources`
 
 If `content/programs/henkel-spark/index.md` already exists, leave it unchanged by default.
 
+If `content/programs/henkel-spark/index.md` exists but `content/programs/henkel-spark/index.ko.md` does not, create the missing Korean file by default.
+
+If `content/programs/henkel-spark/index.ko.md` exists but the English file does not, create the missing English file by default.
+
 If an older standalone file exists, such as `content/programs/henkel-spark.md`, do not silently create a duplicate bundle. Ask the user whether to migrate it, unless the user explicitly asked for migration.
 
 When duplicate or near-duplicate entries are possible:
@@ -271,6 +322,7 @@ When duplicate or near-duplicate entries are possible:
 Before finishing a content-generation task with images:
 
 - Confirm `content/programs/<slug>/index.md` exists.
+- Confirm `content/programs/<slug>/index.ko.md` exists.
 - Confirm any representative image exists in the same bundle as `feature.<ext>`, `cover.<ext>`, or `thumbnail.<ext>`.
 - If `featureimage` is used, confirm it points to a real bundle-local image filename.
 - Run `hugo` and confirm the build succeeds.
@@ -303,3 +355,11 @@ For `open-innovations/reports/2026-06-08-global-open-innovation-programs.md`, cr
 - `nasa-prizes-challenges-crowdsourcing/index.md`
 
 After generation, report which files were created and which existing files were skipped.
+
+When reporting results, separate:
+
+- Bundles created in both languages
+- English files created
+- Korean files created
+- Existing bundles skipped
+- Existing English or Korean companion files that were already present
