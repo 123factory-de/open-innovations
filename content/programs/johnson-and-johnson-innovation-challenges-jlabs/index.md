@@ -27,7 +27,7 @@ resources:
 
 ## Overview
 
-Johnson & Johnson Innovation은 혁신 챌린지와 JLABS 프로그램을 통해 헬스케어 분야의 기업, 연구자, 학생, 창업자를 발굴합니다. 한국 기업은 의약, 의료기기, 디지털 헬스, 생명과학 솔루션을 보유한 경우 개별 챌린지와 JLABS 신청 경로를 검토할 수 있습니다.
+Johnson & Johnson Innovation은 혁신 챌린지와 JLABS 프로그램을 통해 헬스케어 분야의 기업, 연구자, 학생, 창업자를 발굴합니다. 의약, 의료기기, 디지털 헬스, 생명과학 솔루션을 보유한 조직은 개별 챌린지와 JLABS 신청 경로를 검토할 수 있습니다.
 
 ## Focus Areas
 

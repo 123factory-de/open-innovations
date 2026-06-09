@@ -25,7 +25,7 @@ resources:
 
 ## Overview
 
-NASA Prizes, Challenges, and Crowdsourcing은 NASA가 우주 탐사, 항공, 과학, 기술 이전 관련 문제를 대중과 함께 해결하기 위해 운영하는 챌린지 경로입니다. 한국 기업과 연구팀은 개별 과제의 참가 자격과 글로벌 참여 가능성을 확인할 수 있습니다.
+NASA Prizes, Challenges, and Crowdsourcing은 NASA가 우주 탐사, 항공, 과학, 기술 이전 관련 문제를 대중과 함께 해결하기 위해 운영하는 챌린지 경로입니다. 관심 있는 기업과 연구팀은 개별 과제의 참가 자격과 글로벌 참여 가능성을 확인할 수 있습니다.
 
 ## Focus Areas
 

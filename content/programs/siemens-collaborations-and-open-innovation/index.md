@@ -29,7 +29,7 @@ resources:
 
 ## Overview
 
-Siemens Collaborations and Open Innovation은 대학, 연구기관, 스타트업, 공급사, 고객과의 협업을 통해 산업 기술 혁신을 추진하는 공식 협업 채널입니다. 한국 기업은 산업 소프트웨어, 디지털 전환, 지속가능성 관련 솔루션을 Siemens의 협업 프로그램과 챌린지에 맞춰 검토할 수 있습니다.
+Siemens Collaborations and Open Innovation은 대학, 연구기관, 스타트업, 공급사, 고객과의 협업을 통해 산업 기술 혁신을 추진하는 공식 협업 채널입니다. 산업 소프트웨어, 디지털 전환, 지속가능성 관련 솔루션을 보유한 조직은 Siemens의 협업 프로그램과 챌린지에 맞춰 검토할 수 있습니다.
 
 ## Focus Areas
 

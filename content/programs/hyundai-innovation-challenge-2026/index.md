@@ -26,7 +26,7 @@ resources:
 
 ## Overview
 
-Hyundai Innovation Challenge 2026은 Hyundai Motor Company, Hyundai Motor India Limited, Hyundai Motor India Engineering와 유망 스타트업의 협업을 위해 설계된 6개월 오픈 이노베이션 프로그램입니다. 한국 기업과 스타트업은 인도 시장 및 현대의 모빌리티 생태계를 대상으로 실제 PoC와 공동개발 기회를 검토할 수 있습니다.
+Hyundai Innovation Challenge 2026은 Hyundai Motor Company, Hyundai Motor India Limited, Hyundai Motor India Engineering와 유망 스타트업의 협업을 위해 설계된 6개월 오픈 이노베이션 프로그램입니다. 관심 있는 기업과 스타트업은 인도 시장 및 현대의 모빌리티 생태계를 대상으로 실제 PoC와 공동개발 기회를 검토할 수 있습니다.
 
 ## Focus Areas
 

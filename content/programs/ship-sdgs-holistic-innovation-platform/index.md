@@ -24,7 +24,7 @@ resources:
 
 ## Overview
 
-SHIP은 UNDP와 Japan Innovation Network가 SDGs와 기업 혁신 과제를 중심으로 운영하는 오픈 이노베이션 플랫폼입니다. 한국 스타트업과 혁신 기업은 사회적 가치, 지속가능성, 기업 과제 대응 솔루션을 보유한 경우 관련 챌린지를 검토할 수 있습니다.
+SHIP은 UNDP와 Japan Innovation Network가 SDGs와 기업 혁신 과제를 중심으로 운영하는 오픈 이노베이션 플랫폼입니다. 사회적 가치, 지속가능성, 기업 과제 대응 솔루션을 보유한 스타트업과 혁신 조직은 관련 챌린지를 검토할 수 있습니다.
 
 ## Focus Areas
 
