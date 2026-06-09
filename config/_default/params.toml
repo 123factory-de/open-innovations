@@ -172,7 +172,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # globalWidgetPosition = "right"
 
 [verification]
-  # google = ""
+  google = "ROfPZkVWHfOJC_-d9abK4MWhl3AJmqnfkNfoBCJlYls"
   # bing = ""
   # pinterest = ""
   # yandex = ""
