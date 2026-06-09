@@ -40,10 +40,12 @@ Do not create content for rows under `## Excluded Or Uncertain Leads` unless the
 2. For each program, extract the sponsor, source URL, status, deadline, eligibility, focus areas, benefits, application path, and notes.
 3. Generate a stable slug.
 4. Check whether `content/programs/<slug>/index.md` already exists.
-5. If the bundle exists, do not overwrite it unless the user asks to refresh or replace existing content.
-6. Create missing entries with valid Hugo YAML frontmatter and a concise body.
-7. Add a small representative image when a suitable official image can be found.
-8. Run a quick validation pass:
+5. Also check for an existing program by comparing the official URL and normalized title across existing `content/programs/*/index.md` files.
+6. If an existing bundle already represents the same program, skip it.
+7. If the bundle exists, do not overwrite it unless the user asks to refresh or replace existing content.
+8. Create only missing entries with valid Hugo YAML frontmatter and a concise body.
+9. Add a small representative image when a suitable official image can be found.
+10. Run a quick validation pass:
    - Every file has frontmatter bounded by `---`.
    - `draft` is `false`.
    - `externalUrl` is non-empty.
@@ -71,6 +73,20 @@ Examples:
 - `Startup Garage - BMW Group` -> `bmw-group-startup-garage`
 - `Open Innovation Platform - IMDA Singapore` -> `imda-open-innovation-platform`
 - `NASA Prizes, Challenges, and Crowdsourcing` -> `nasa-prizes-challenges-crowdsourcing`
+
+## Duplicate Detection Rules
+
+Treat a program as already existing and skip creation when any of these is true:
+
+- `content/programs/<slug>/index.md` already exists for the generated slug.
+- Another existing bundle has the same `externalUrl`.
+- Another existing bundle has the same normalized program title after lowercasing and removing minor punctuation differences.
+
+When a duplicate is found:
+
+- Do not create a new bundle for the same program.
+- Do not rename or overwrite the existing bundle unless the user explicitly asks for a refresh, merge, or replacement.
+- Prefer reporting which existing path was matched so the user can decide whether to update it later.
 
 ## Frontmatter Schema
 

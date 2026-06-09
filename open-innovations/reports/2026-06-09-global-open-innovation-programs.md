@@ -6,7 +6,7 @@ Scope: Worldwide active, always-open, and currently verifiable open innovation p
 ## Summary
 
 - Total programs reviewed: 25
-- Included high-confidence programs: 20
+- Included high-confidence programs: 21
 - Regions covered: Global, North America, Europe, East Asia, Southeast Asia
 - Sectors covered: consumer goods, healthcare, pharma, agriculture, food and nutrition, energy, mobility, industrial technology, aerospace, digital innovation, public-sector innovation, social impact
 
@@ -34,6 +34,7 @@ Scope: Worldwide active, always-open, and currently verifiable open innovation p
 | XPRIZE Active Competitions | XPRIZE Foundation | Global | Deep tech and social impact | Active | Quantum; climate; health; wildfire; water | https://www.xprize.org/competitions?status=Active |
 | MIT Solve Open Challenges | MIT Solve | Global | Social impact | Active | Climate; health; learning; economic prosperity; Indigenous communities | https://solve.mit.edu/challenges |
 | NASA Prizes, Challenges, and Crowdsourcing | NASA | Global / US-led | Aerospace and science | Active | Space; aeronautics; science; public challenges | https://www.nasa.gov/about-prizes-challenges-crowdsourcing/ |
+| Hyundai Innovation Challenge 2026 | Hyundai Motor Company / HMIL / HMIE | India / Global startups | Mobility and automotive innovation | Active | ADAS; EV charging; MaaS; smart materials; factory optimization | https://hyundaiinnovationchallenge.com/ |
 
 ## Program Details
 
@@ -316,6 +317,20 @@ Scope: Worldwide active, always-open, and currently verifiable open innovation p
 - Application path: Review open opportunities under NASA’s prizes, challenges, and crowdsourcing program
 - Official source: https://www.nasa.gov/about-prizes-challenges-crowdsourcing/
 - Notes: Official page links to open opportunities and states the program engages the public worldwide in NASA research problems.
+
+### Hyundai Innovation Challenge 2026 - Hyundai Motor Company / HMIL / HMIE
+
+- Region: India / Global startups
+- Country: India / South Korea
+- Sector: Mobility and automotive innovation
+- Status: Active
+- Deadline:
+- Eligibility: Registered business entities and startups
+- Focus areas: ADAS systems; vehicle range optimisation; in-vehicle experience; sustainable materials; EV charging; industrial edge AI; logistics visibility; MaaS
+- Benefits: PoC co-development with Hyundai Motor India Limited, testing and validation with Hyundai Motor India Engineering, expert guidance, PoC grants, market exposure, and potential follow-on investment
+- Application path: Apply through the official Hyundai Innovation Challenge 2026 portal
+- Official source: https://hyundaiinnovationchallenge.com/
+- Notes: Official page explicitly says “Applications are open, Apply now!” and describes a six-month startup collaboration program with Hyundai entities in India.
 
 ## Excluded Or Uncertain Leads
 
